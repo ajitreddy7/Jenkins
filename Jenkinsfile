@@ -3,12 +3,12 @@ pipeline{
     stages{
         stage(build docker image){
             steps{
-                sh docker build -t ajith .
+                sh 'docker build -t ajith .'
             }
         }
         stage(run docker image){
             steps{
-                sh docker run ajith
+                'sh docker run ajith'
             }
         }
     }
